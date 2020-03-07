@@ -3,9 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Zetera - Games</title>
+    <title>Game Zetera - Home</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="icon/favicon.ico"/>
 </head>
 <body>
-    
+
+<!--Header Start-->
+
+
+    <div class="header">
+        <a href="index.html">
+            <img src="img/logo.png" class="logo">
+        </a>
+        <nav class="nav">
+            <ul>
+                <li>
+                    <a class="navIndex" href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="navAbout" href="about.html">About</a>
+                </li>
+                <li>
+                    <a class="navContent navSelect" href="content.html">Games</a>
+                </li>
+            </ul>
+            <div class="socials">
+                <img src="img/twitter.png">
+                <img src="img/facebook.jpg">
+                <img src="img/snapchat.png">
+            </div>
+        </nav>
+    </div>
+
+<!--Header End-->
+
+<!--COMMENT: Instead of doing main and side again, I chose to call the next section games due to the nature of how the page looks and to avoid conflicting CSS.-->
+
+<!--Games Start-->
+
+<!--COMMENT: I added a class to all the lines that mentioned whether or not the game was available with ava or notAva so I could target them in a group in the CSS to color code them.-->
+
+<div class="games">
+    <img src="img/devil-may-cry-3.jpg" class="dmc3">
+    <img src="img/persona-3.jpg" class="persona">
+    <img src="img/halo.jpg" class="halo">
+    <img src="img/earthbound.jpg" class="eb">
+    <div class="dmc3Title">Devil May Cry 3 (PS2)</div>
+    <div class="dmc3Price">$19.99</div>
+    <div class="dmc3Ava ava">Available</div>
+    <div class="per3Title">Persona 3 FES (PS2)</div>
+    <div class="per3Price">$14.99</div>
+    <div class="per3Ava ava">Available</div>
+    <div class="haloTitle">Halo: CE (XBOX)</div>
+    <div class="haloPrice">$29.99</div>
+    <div class="haloAva ava">Available</div>
+    <div class="ebTitle">EarthBound (SNES)</div>
+    <div class="ebPrice">$29.99</div>
+    <div class="ebAva notAva">Available</div>
+</div>
+
+<!--Games End-->
+<!--Footer Start-->
+
+<div class="footer">
+    <div class="copyright">&copy;James Pasquale 2020</div>
+</div>
+
+<!--Footer End-->
 </body>
 </html>

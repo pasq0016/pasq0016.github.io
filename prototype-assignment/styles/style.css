@@ -55,152 +55,591 @@ body{
     background-color: black;
 }
 
-/* Header Start */
+/* Desktop View */
 
-.header{
-    width: 100%;
-    height: 200px;
-    background-color: #393939;
-    display: grid;
+@media screen and (min-width: 1000px){
+
+    /* Header Start */
+
+    .header{
+        width: 100%;
+        height: 200px;
+        background-color: #393939;
+        display: grid;
+    }
+
+    /* Orignally when I made my prototype in XD, I used green to compliment the logo behind it. So instead of making a new square logo, I put green behind it with the background-color property. */
+
+    .logo{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #008836;
+    }
+    
+    .nav{
+        padding-top: 20px;
+        padding-left: 6%;
+    }
+    
+    nav>ul{
+        margin-left: 150px;
+    }
+    
+    nav>ul>li{
+        display: inline;
+        padding: 30px;
+    }
+    
+    nav>ul>li>a{
+        text-decoration: none;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5rem;
+    }
+    
+    .navSelect{
+        font-weight: 700;
+    }
+
+    /* COMMENT: I had a lot of trouble trying to figure out how to get the socials into the top-right corner but thankfully the professor was able to help troubleshoot and get the socials to be accurate to my vision. */
+
+    .socials{
+        justify-self: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+    }
+    
+    .socials img{
+        height: 50px;
+        width: 50px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Header End */
+    
+    /* COMMENT: I made a class called .mainside to group the main and sidebar together to make it easier when making a grid because I want this class to be the container of my grid. */
+    
+    .mainside{
+        display: grid;
+        grid-template-columns: 40%, 30%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main side";
+        margin-left: 10%;
+    }
+    
+    /* Main Start */
+    
+    .main{
+        width: 10%;
+        margin-left: 2%;
+        margin-right: 5%;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        grid-area: main;
+    }
+    
+    .posts{
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 20px;
+        margin-top: 30px;
+    }
+    
+    .re3{
+        margin: 15px;
+        max-width: 600px;
+    }
+    
+    .re3text{
+        width: 500px;
+        margin: 20px;
+        font-size: 1.5rem;
+    }
+    
+    /* COMMENT: I learned about a property online called white-space: nowrap to help me get the read more to not wrap when I couldn't figure out why it was wrapping. */
+
+    .readmore{
+        margin-left: 20px;
+        font-weight: 700;
+        padding-bottom: 100px;
+        font-size: 1.5rem;
+        width: 120px;
+        white-space: nowrap;
+    }
+    
+    /* COMMENT: I chose 182 pixels for margin-bottom on the map so that for people using Chrome as a browser, the footer would align perfectly with the bottom of the screen since there was not enough to fill the screen vertically. */
+
+    .googleMap{
+        margin-top: 20%;
+        margin-bottom: 182px;
+    }
+
+    /* Main End */
+    
+    /* Side Start */
+    
+    .side{
+        grid-area: side;
+        color: white;
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 0px;
+        width: 200px;
+        margin-top: 50px;
+        font-weight: 700;
+    }
+    
+    .categories{
+        font-weight: 400;
+        padding: 10px;
+    }
+    
+    .aboutList{
+        width: 350px;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    /* COMMENT: I chose #008836 to match the color behind the logo on this site. */
+
+    .aboutList>li>a{
+        line-height: 6rem;
+        color: #008836;
+    }
+
+    /* Side End */
+    
+    /* Games Start */
+
+    .games{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "dmc3 persona halo eb"
+        "dmc3Title per3Title haloTitle ebTitle"
+        "dmc3Price per3Price haloPrice ebPrice"
+        "dmc3Ava per3Ava haloAva ebAva";
+        justify-items: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        /*COMMENT: I adjusted the padding to make it looks best on chrome desktop in terms of where the footer is. */
+
+        padding-top: 40px;
+        padding-bottom: 55px;
+
+        line-height: 24px;
+    }
+
+    .ava{
+        color: #12B800;
+    }
+
+    .notAva{
+        color: #D20000;
+    }
+
+    /*** Grid Area Naming Starts (with other small edits to make more visually appealing) ***/
+
+    .dmc3{
+        grid-area: dmc3;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .dmc3Title{
+        grid-area: dmc3Title;
+    }
+
+    .dmc3Price{
+        grid-area: dmc3Price;
+    }
+
+    .dmc3Ava{
+        grid-area: dmc3Ava;
+    }
+
+    .persona{
+        grid-area: persona;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .per3Title{
+        grid-area: per3Title;
+    }
+
+    .per3Price{
+        grid-area: per3Price;
+    }
+
+    .per3Ava{
+        grid-area: per3Ava;
+    }
+
+    .halo{
+        grid-area: halo;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .haloTitle{
+        grid-area: haloTitle;
+    }
+
+    .haloPrice{
+        grid-area: haloPrice;
+    }
+
+    .haloAva{
+        grid-area: haloAva;
+    }
+
+    .eb{
+        grid-area: eb;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .ebTitle{
+        grid-area: ebTitle;
+    }
+
+    .ebPrice{
+        grid-area: ebPrice;
+    }
+
+    .ebAva{
+        grid-area: ebAva;
+    }
+
+    /*** Grid Area Naming Ends ***/
+
+    /* Games End */
+
+    /* Footer Start */
+    
+    .footer{
+        width: 100%;
+        background-color: #393939;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .copyright{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    /* Footer End */
+
 }
 
-/* Orignally when I made my prototype in XD,  */
+/* Desktop End */
 
-.logo{
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background-color: #008836;
+/* Tablet Start */
+
+@media screen and (min-width: 400px) and (max-width: 999px){
+
+    /* Header Start */
+
+    .header{
+        width: 100%;
+        height: 200px;
+        background-color: #393939;
+        display: grid;
+    }
+
+    /* Orignally when I made my prototype in XD,  */
+
+    .logo{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: #008836;
+    }
+    
+    .nav{
+        padding-top: 20px;
+        padding-left: 6%;
+    }
+    
+    nav>ul{
+        margin-left: 150px;
+    }
+    
+    nav>ul>li{
+        display: inline;
+        padding: 30px;
+    }
+    
+    nav>ul>li>a{
+        text-decoration: none;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2.5rem;
+    }
+    
+    .navSelect{
+        font-weight: 700;
+    }
+
+    /* COMMENT: I had a lot of trouble trying to figure out how to get the socials into the top-right corner but thankfully the professor was able to help troubleshoot and get the socials to be accurate to my vision. */
+
+    .socials{
+        justify-self: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+    }
+    
+    .socials img{
+        height: 50px;
+        width: 50px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Header End */
+    
+    /* COMMENT: I made a class called .mainside to group the main and sidebar together to make it easier when making a grid because I want this class to be the container of my grid. */
+    
+    .mainside{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main"
+        "side";
+        margin-left: 10%;
+    }
+    
+    /* Main Start */
+    
+    .main{
+        width: 10%;
+        margin-left: 2%;
+        margin-right: 5%;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        grid-area: main;
+    }
+    
+    .posts{
+        font-size: 3rem;
+        font-weight: 700;
+        margin: 20px;
+        margin-top: 30px;
+    }
+    
+    .re3{
+        margin: 15px;
+        max-width: 600px;
+    }
+    
+    .re3text{
+        width: 500px;
+        margin: 20px;
+        font-size: 1.5rem;
+    }
+    
+    /* COMMENT: I learned about a property online called white-space: nowrap to help me get the read more to not wrap when I couldn't figure out why it was wrapping. */
+
+    .readmore{
+        margin-left: 20px;
+        font-weight: 700;
+        padding-bottom: 100px;
+        font-size: 1.5rem;
+        width: 120px;
+        white-space: nowrap;
+    }
+    
+    /* COMMENT: I chose 182 pixels for margin-bottom on the map so that for people using Chrome as a browser, the footer would align perfectly with the bottom of the screen since there was not enough to fill the screen vertically. */
+
+    .googleMap{
+        margin-top: 20%;
+        margin-bottom: 182px;
+    }
+
+    /* Main End */
+    
+    /* Side Start */
+    
+    .side{
+        grid-area: side;
+        color: white;
+        font-size: 2rem;
+        font-family: 'Roboto', sans-serif;
+        margin-left: 0px;
+        width: 200px;
+        margin-top: 50px;
+        font-weight: 700;
+    }
+    
+    .categories{
+        font-weight: 400;
+        padding: 10px;
+    }
+    
+    .aboutList{
+        width: 350px;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    /* COMMENT: I chose #008836 to match the color behind the logo on this site. */
+
+    .aboutList>li>a{
+        line-height: 6rem;
+        color: #008836;
+    }
+
+    /* Side End */
+    
+    /* Games Start */
+
+    .games{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "dmc3 persona halo eb"
+        "dmc3Title per3Title haloTitle ebTitle"
+        "dmc3Price per3Price haloPrice ebPrice"
+        "dmc3Ava per3Ava haloAva ebAva";
+        justify-items: center;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        /*COMMENT: I adjusted the padding to make it looks best on chrome desktop in terms of where the footer is. */
+
+        padding-top: 40px;
+        padding-bottom: 55px;
+
+        line-height: 24px;
+    }
+
+    .ava{
+        color: #12B800;
+    }
+
+    .notAva{
+        color: #D20000;
+    }
+
+    /*** Grid Area Naming Starts (with other small edits to make more visually appealing) ***/
+
+    .dmc3{
+        grid-area: dmc3;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .dmc3Title{
+        grid-area: dmc3Title;
+    }
+
+    .dmc3Price{
+        grid-area: dmc3Price;
+    }
+
+    .dmc3Ava{
+        grid-area: dmc3Ava;
+    }
+
+    .persona{
+        grid-area: persona;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .per3Title{
+        grid-area: per3Title;
+    }
+
+    .per3Price{
+        grid-area: per3Price;
+    }
+
+    .per3Ava{
+        grid-area: per3Ava;
+    }
+
+    .halo{
+        grid-area: halo;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .haloTitle{
+        grid-area: haloTitle;
+    }
+
+    .haloPrice{
+        grid-area: haloPrice;
+    }
+
+    .haloAva{
+        grid-area: haloAva;
+    }
+
+    .eb{
+        grid-area: eb;
+        max-width: 70%;
+        margin-bottom: 10px;
+    }
+
+    .ebTitle{
+        grid-area: ebTitle;
+    }
+
+    .ebPrice{
+        grid-area: ebPrice;
+    }
+
+    .ebAva{
+        grid-area: ebAva;
+    }
+
+    /*** Grid Area Naming Ends ***/
+
+    /* Games End */
+
+    /* Footer Start */
+    
+    .footer{
+        width: 100%;
+        background-color: #393939;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .copyright{
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    /* Footer End */
+
 }
 
-.nav{
-    padding-top: 20px;
-    padding-left: 6%;
-}
-
-nav>ul{
-    margin-left: 150px;
-}
-
-nav>ul>li{
-    display: inline;
-    padding: 30px;
-}
-
-nav>ul>li>a{
-    text-decoration: none;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 2.5rem;
-}
-
-.navSelect{
-    font-weight: 700;
-}
-
-/* COMMENT: I had a lot of trouble trying to figure out how to get the socials into the top-right corner but thankfully the professor was able to help troubleshoot and get the socials to be accurate to my vision. */
-
-.socials{
-    justify-self: end;
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: flex;
-}
-
-.socials img{
-    height: 50px;
-    width: 50px;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header End */
-
-/* COMMENT: I made a class called .mainside to group the main and sidebar together to make it easier when making a grid because I want this class to be the container of my grid. */
-
-.mainside{
-    display: grid;
-    grid-template-columns: 40%, 30%;
-    grid-template-rows: auto;
-    grid-template-areas: 
-    "main side";
-    margin-left: 10%;
-}
-
-/* Main Start */
-
-.main{
-    width: 10%;
-    margin-left: 2%;
-    margin-right: 5%;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    grid-area: main;
-}
-
-.posts{
-    font-size: 3rem;
-    font-weight: 700;
-    margin: 20px;
-    margin-top: 30px;
-}
-
-.re3{
-    margin: 15px;
-    max-width: 600px;
-}
-
-.re3text{
-    width: 500px;
-    margin: 20px;
-    font-size: 1.5rem;
-}
-
-.readmore{
-    margin-left: 20px;
-    font-weight: 700;
-    padding-bottom: 100px;
-    font-size: 1.5rem;
-    width: 120px;
-}
-
-/* Main End */
-
-/* Side Start */
-
-.side{
-    grid-area: side;
-    color: white;
-    font-size: 2rem;
-    font-family: 'Roboto', sans-serif;
-    margin-left: 200px;
-    width: 200px;
-    margin-top: 50px;
-    font-weight: 700;
-}
-
-.categories{
-    font-weight: 400;
-    padding: 10px;
-}
-
-/* Side End */
-
-/* Footer Start */
-
-.footer{
-    width: 100%;
-    background-color: #393939;
-    color: white;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.5rem;
-    text-align: center;
-}
-
-.copyright{
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-/* Footer End */
+/* Tablet End */
