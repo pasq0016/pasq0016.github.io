@@ -51,9 +51,13 @@ table {
 
 /* CSS Reset End */
 
+.navSelect{
+    text-decoration: underline;
+}
+
 /* Desktop View */
 
-/*@media screen and (min-width: 1000px){*/
+@media screen and (min-width: 1400px){
 
     .header{
         width: 100%;
@@ -63,7 +67,744 @@ table {
 
     .logo{
         position: absolute;
-        width: 200px;
-        height: 200px;
-        background-color: #008836;
+        width: 400px;
+        height: auto;
     }
+
+    .nav{
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    nav>ul>li{
+        display: inline;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    
+    nav>ul>li>a{
+        text-decoration: none;
+        color: #2382E6;
+        font-size: 50px;
+    }
+
+    .socials{
+        justify-self: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+    }
+
+    .socials img{
+        height: 60px;
+        width: 60px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .post-header{
+        width: 75%;
+        height: 1px;
+        background-color:#4E4E4E;
+        margin: 30px auto 0 auto;
+    }
+
+    .mainside{
+        display: grid;
+        grid-template-columns: 40%, 30%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main side";
+    }
+
+    .main1{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #5B5b5B;
+        line-height: 60px;
+        margin: 5% 5% 0 15%;
+        grid-area: main;
+    }
+
+    .middleHL{
+        color: #2382E6;
+    }
+
+    .offerList{
+        font-family: 'Oswald', sans-serif;
+        font-size: 76px;
+        color: #2382E6;
+        line-height: 120px;
+        margin: 5% 5% 0 40%;
+    }
+
+    .side{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #2382E6;
+        line-height: 53px;
+        margin: 8% 10% 0 5%;
+        grid-area: side;
+    }
+
+    .gz{
+        width: 150px;
+        height: 150px;
+        float: right;
+        margin: 0 8% 0 0;
+    }
+
+    .doomEt{
+        width: 280px;
+        height: auto;
+        float: left;
+    }
+
+    .testa2{
+        margin-top: 8%;
+    }
+
+    .ABmainside{
+        display: grid;
+        grid-template-columns: 40%, 30%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main side";
+    }
+
+    .ABmain1{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #5B5b5B;
+        line-height: 60px;
+        margin: 5% 15% 0 15%;
+        max-width: 80%;
+        grid-area: main;
+    }
+
+    .ABside{
+        margin-top: 2rem;
+        margin-right: 6rem;
+        grid-area: side;
+    }
+
+    .me{
+        width: 500px;
+        height: auto;
+    }
+
+    .works{
+        margin: 2% 10% 0 10%;
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #2382E6;
+        line-height: 60px;
+    }
+
+    .twitch{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .tw1{
+        order: 1;
+        height: 200px;
+        margin: 10px auto;
+    }
+
+    .tw2{
+        order: 2;
+        height: 200px;
+        margin: 10px auto;
+    }
+
+    .tw3{
+        order: 3;
+        height: 200px;
+        margin: 10px auto;
+    }
+
+    .appIcons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .ai1{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .ai2{
+        order: 2;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .ai3{
+        order: 3;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .ai4{
+        order: 4;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .ai5{
+        order: 5;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .logos{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .l1{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .l2{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .l3{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .footer{
+        height: 140px;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        color: #2382E6;
+        background-color: #EEEEEE;
+    }
+
+    .copyright{
+        font-size: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1399px){
+
+    .header{
+        width: 100%;
+        height: 200px;
+        display: grid;
+    }
+
+    .logo{
+        position: absolute;
+        width: 400px;
+        height: auto;
+    }
+
+    .nav{
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    nav>ul>li{
+        display: inline;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    nav>ul>li>a{
+        text-decoration: none;
+        color: #2382E6;
+        font-size: 25px;
+    }
+
+    .socials{
+        justify-self: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+    }
+
+    .socials img{
+        height: 60px;
+        width: 60px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .post-header{
+        width: 75%;
+        height: 1px;
+        background-color:#4E4E4E;
+        margin: 30px auto 0 auto;
+    }
+
+    .mainside{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main"
+        "side";
+    }
+
+    .main1{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #5B5b5B;
+        line-height: 60px;
+        margin: 5% 5% 0 10%;
+        grid-area: main;
+    }
+
+    .middleHL{
+        color: #2382E6;
+    }
+
+    .offerList{
+        font-family: 'Oswald', sans-serif;
+        font-size: 76px;
+        color: #2382E6;
+        line-height: 120px;
+        margin: 5% 5% 0 20%;
+    }
+
+    .side{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #2382E6;
+        line-height: 53px;
+        margin: 8% 10% 0 5%;
+        grid-area: side;
+    }
+
+    .gz{
+        width: 150px;
+        height: 150px;
+        float: right;
+        margin: 0 8% 0 0;
+    }
+
+    .doomEt{
+        width: 280px;
+        height: auto;
+        float: left;
+    }
+
+    .testa2{
+        margin-top: 8%;
+    }
+
+    .ABmainside{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main"
+        "side";
+    }
+
+    .ABmain1{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #5B5b5B;
+        line-height: 60px;
+        margin: 5% 15% 0 15%;
+        max-width: 80%;
+        grid-area: main;
+    }
+
+    .ABside{
+        margin: 0 auto;
+        grid-area: side;
+    }
+
+    .me{
+        width: 500px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .works{
+        margin: 2% 10% 0 10%;
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #2382E6;
+        line-height: 60px;
+    }
+
+    .twitch{
+        display: column;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tw1{
+        order: 1;
+        height: 250px;
+        margin: 0 auto;
+    }
+
+    .tw2{
+        order: 2;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .tw3{
+        order: 3;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .appIcons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .ai1{
+        order: 1;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai2{
+        order: 2;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai3{
+        order: 3;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai4{
+        order: 4;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai5{
+        order: 5;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .logos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .l1{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .l2{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .l3{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .footer{
+        height: 140px;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        color: #2382E6;
+        background-color: #EEEEEE;
+    }
+
+    .copyright{
+        font-size: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 599px){
+
+    .header{
+        width: 100%;
+        height: 200px;
+        display: grid;
+    }
+
+    .logo{
+        position: absolute;
+        width: 300px;
+        height: auto;
+    }
+
+    .nav{
+        font-family: 'Rubik', sans-serif;
+        font-weight: 500;
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    nav>ul>li{
+        display: block;
+        line-height: 60px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    nav>ul>li>a{
+        text-decoration: none;
+        color: #2382E6;
+        font-size: 40px;
+    }
+
+    .socials{
+        justify-self: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+    }
+
+    .socials img{
+        height: 60px;
+        width: 60px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .post-header{
+        width: 75%;
+        height: 1px;
+        background-color:#4E4E4E;
+        margin: 200px auto 0 auto;
+    }
+
+    .mainside{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main"
+        "side";
+    }
+
+    .main1{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #5B5b5B;
+        line-height: 60px;
+        margin: 5% 5% 0 10%;
+        grid-area: main;
+    }
+
+    .middleHL{
+        color: #2382E6;
+    }
+
+    .offerList{
+        font-family: 'Oswald', sans-serif;
+        font-size: 76px;
+        color: #2382E6;
+        line-height: 120px;
+        margin: 5% 5% 0 20%;
+    }
+
+    .side{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #2382E6;
+        line-height: 53px;
+        margin: 8% 10% 0 5%;
+        grid-area: side;
+    }
+
+    .gz{
+        width: 150px;
+        height: 150px;
+        float: right;
+        margin: 0 8% 0 0;
+    }
+
+    .doomEt{
+        width: 280px;
+        height: auto;
+        float: left;
+    }
+
+    .testa2{
+        margin-top: 8%;
+    }
+
+    .ABmainside{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "main"
+        "side";
+    }
+
+    .ABmain1{
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #5B5b5B;
+        line-height: 60px;
+        margin: 5% 15% 0 15%;
+        max-width: 80%;
+        grid-area: main;
+    }
+
+    .ABside{
+        margin: 0 auto;
+        grid-area: side;
+    }
+
+    .me{
+        width: 500px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .works{
+        margin: 2% 10% 0 10%;
+        font-family: 'Oswald', sans-serif;
+        font-size: 40px;
+        color: #2382E6;
+        line-height: 60px;
+    }
+
+    .twitch{
+        display: column;
+        flex-direction: row;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tw1{
+        order: 1;
+        height: 220px;
+        margin: 0 auto;
+    }
+
+    .tw2{
+        order: 2;
+        height: 220px;
+        margin: 10px auto;
+    }
+
+    .tw3{
+        order: 3;
+        height: 220px;
+        margin: 10px auto;
+    }
+
+    .appIcons{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .ai1{
+        order: 1;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai2{
+        order: 2;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai3{
+        order: 3;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai4{
+        order: 4;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .ai5{
+        order: 5;
+        height: 250px;
+        margin: 10px auto;
+    }
+
+    .logos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .l1{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .l2{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .l3{
+        order: 1;
+        height: 180px;
+        margin: 10px auto;
+    }
+
+    .footer{
+        height: 140px;
+        margin: 80px auto 0 auto;
+        text-align: center;
+        font-family: 'Rubik', sans-serif;
+        color: #2382E6;
+        background-color: #EEEEEE;
+    }
+
+    .copyright{
+        font-size: 40px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
